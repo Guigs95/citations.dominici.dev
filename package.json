@@ -1,8 +1,9 @@
 {
   "name": "frontend-n",
   "version": "0.1.0",
-  "private": true,
+  "proxy": "http://localhost:3000/",
   "homepage": ".",
+  "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
