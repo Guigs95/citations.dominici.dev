@@ -28,6 +28,9 @@ function App() {
     var randomIndex = Math.floor(Math.random() * _quotes.length);        
     setQuote(_quotes[randomIndex]) // citation aléatoire
     setIsLoading(false)
+
+    var element = document.getElementById("quoteCard");
+    element.classList.remove("hide");
   }
 
   authorNameForWiki = ReactDOMServer.renderToString(quote.author).replace(' ', '_');
@@ -38,13 +41,15 @@ function App() {
         <p>
           <Content className="container">
             <Card
+              id="quoteCard"
+              className="hide"
               title={quote.author}
               bordered={false}
-              extra={<a target="_blank" href={"https://fr.wikipedia.org/wiki/" + authorNameForWiki}>Qui est {quote.author} ?</a>}
+              extra={<a target="_blank" href={"https://fr.wikipedia.org/wiki/" + authorNameForWiki}>Qui est-ce ?</a>}
               style={{
                 textAlign: "left",
                 fontSize: 18,
-                width: 1000,
+                margin: "0 15px 0 15px",
                 borderRadius: "10px"
               }}
             >
